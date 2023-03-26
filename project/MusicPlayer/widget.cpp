@@ -47,3 +47,28 @@ Widget::~Widget()
     delete audioOutput;
     delete mediaPlayer;
 }
+//上一首
+void Widget::on_pushButton_2_clicked()
+{
+    if(curPlayIndex==0)
+    {
+        curPlayIndex=playList.size()-1;
+    }
+    else
+    {
+        curPlayIndex=(curPlayIndex-1)%playList.size();
+    }
+    ui->listWidget->setCurrentRow(curPlayIndex);
+    mediaPlayer->setSource(playList[curPlayIndex]);
+    mediaPlayer->play();
+}
+
+//下一首
+void Widget::on_pushButton_4_clicked()
+{
+    curPlayIndex=(curPlayIndex+1)%playList.size();
+    ui->listWidget->setCurrentRow(curPlayIndex);
+    mediaPlayer->setSource(playList[curPlayIndex]);
+    mediaPlayer->play();
+}
+
