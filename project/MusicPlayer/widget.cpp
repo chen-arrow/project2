@@ -41,8 +41,7 @@ Widget::Widget(QWidget *parent)
 
 }
 
-<<<<<<< HEAD
-=======
+
 void Widget::on_pushButton_3_clicked()
 {
     if(ifplay==0)//判断是否为播放状态
@@ -57,14 +56,14 @@ void Widget::on_pushButton_3_clicked()
     }
 }
 
->>>>>>> remotes/origin/zy
+
 Widget::~Widget()
 {
     delete ui;
     delete audioOutput;
     delete mediaPlayer;
 }
-<<<<<<< HEAD
+
 //上一首
 void Widget::on_pushButton_2_clicked()
 {
@@ -81,7 +80,7 @@ void Widget::on_pushButton_2_clicked()
     mediaPlayer->play();
 }
 
-//下一首
+
 void Widget::on_pushButton_4_clicked()
 {
     curPlayIndex=(curPlayIndex+1)%playList.size();
@@ -90,5 +89,4 @@ void Widget::on_pushButton_4_clicked()
     mediaPlayer->play();
 }
 
-=======
->>>>>>> remotes/origin/zy
+
