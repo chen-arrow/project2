@@ -26,5 +26,6 @@ private:
     QAudioOutput * audioOutput;  //output对象
     QMediaPlayer * mediaPlayer;  //媒体播放对象
     int curPlayIndex = 0;
+    int ifplay=0;
 };
 #endif // WIDGET_H

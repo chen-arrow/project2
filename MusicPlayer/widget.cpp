@@ -43,15 +43,15 @@ Widget::Widget(QWidget *parent)
 
 void Widget::on_pushButton_3_clicked()
 {
-    if(mediaPlayer->state() != QMediaPlayer::PlayingState)//判断是否为播放状态
+    if(ifplay==0)//判断是否为播放状态
     {
         mediaPlayer->play();//播放
-        //ui->pushButton_play_paus->setText("暂停");
+        ifplay=1;
     }
     else
     {
         mediaPlayer->pause();//暂停
-        //ui->pushButton_play_paus->setText("播放");
+        ifplay=0;
     }
 }
 
