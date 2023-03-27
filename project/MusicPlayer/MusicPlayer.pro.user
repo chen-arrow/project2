@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 9.0.2, 2023-03-27T23:15:14. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{6892624e-99a5-4342-9e77-84f07c672c14}</value>
+=======
+<!-- Written by QtCreator 9.0.2, 2023-03-27T22:56:07. -->
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{c800ac9a-117f-4b43-922a-ba240456edb1}</value>
+>>>>>>> remotes/origin/zy
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -87,16 +95,27 @@
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Desktop</value>
+<<<<<<< HEAD
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 6.4.3 MSVC2019 64bit</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 6.4.3 MSVC2019 64bit</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt6.643.win64_msvc2019_64_kit</value>
+=======
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 6.4.2 MinGW 64-bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 6.4.2 MinGW 64-bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt6.642.win64_mingw_kit</value>
+>>>>>>> remotes/origin/zy
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\MusicPlayer\second-project-warehouse\project\MusicPlayer\..\build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Debug</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">D:/MusicPlayer/second-project-warehouse/project/build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Debug</value>
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\USER\Downloads\second-project-warehouse-master\project\MusicPlayer\..\build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/USER/Downloads/second-project-warehouse-master/project/build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Debug</value>
+>>>>>>> remotes/origin/zy
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -134,8 +153,13 @@
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\MusicPlayer\second-project-warehouse\project\MusicPlayer\..\build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Release</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">D:/MusicPlayer/second-project-warehouse/project/build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Release</value>
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\USER\Downloads\second-project-warehouse-master\project\MusicPlayer\..\build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/USER/Downloads/second-project-warehouse-master/project/build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Release</value>
+>>>>>>> remotes/origin/zy
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -175,8 +199,13 @@
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
     <value type="int" key="EnableQmlDebugging">0</value>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\MusicPlayer\second-project-warehouse\project\MusicPlayer\..\build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Profile</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">D:/MusicPlayer/second-project-warehouse/project/build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Profile</value>
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\USER\Downloads\second-project-warehouse-master\project\MusicPlayer\..\build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/USER/Downloads/second-project-warehouse-master/project/build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Profile</value>
+>>>>>>> remotes/origin/zy
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -236,14 +265,23 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/MusicPlayer/second-project-warehouse/project/MusicPlayer/MusicPlayer.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/MusicPlayer/second-project-warehouse/project/MusicPlayer/MusicPlayer.pro</value>
+=======
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/USER/Downloads/second-project-warehouse-master/project/MusicPlayer/MusicPlayer.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/USER/Downloads/second-project-warehouse-master/project/MusicPlayer/MusicPlayer.pro</value>
+>>>>>>> remotes/origin/zy
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+<<<<<<< HEAD
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/MusicPlayer/second-project-warehouse/project/build-MusicPlayer-Desktop_Qt_6_4_3_MSVC2019_64bit-Debug</value>
+=======
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/USER/Downloads/second-project-warehouse-master/project/build-MusicPlayer-Desktop_Qt_6_4_2_MinGW_64_bit-Debug</value>
+>>>>>>> remotes/origin/zy
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

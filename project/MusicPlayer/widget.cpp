@@ -41,12 +41,30 @@ Widget::Widget(QWidget *parent)
 
 }
 
+<<<<<<< HEAD
+=======
+void Widget::on_pushButton_3_clicked()
+{
+    if(ifplay==0)//判断是否为播放状态
+    {
+        mediaPlayer->play();//播放
+        ifplay=1;
+    }
+    else
+    {
+        mediaPlayer->pause();//暂停
+        ifplay=0;
+    }
+}
+
+>>>>>>> remotes/origin/zy
 Widget::~Widget()
 {
     delete ui;
     delete audioOutput;
     delete mediaPlayer;
 }
+<<<<<<< HEAD
 //上一首
 void Widget::on_pushButton_2_clicked()
 {
@@ -72,3 +90,5 @@ void Widget::on_pushButton_4_clicked()
     mediaPlayer->play();
 }
 
+=======
+>>>>>>> remotes/origin/zy
