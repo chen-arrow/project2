@@ -41,29 +41,12 @@ Widget::Widget(QWidget *parent)
 
 }
 
-
-void Widget::on_pushButton_3_clicked()
-{
-    if(ifplay==0)//判断是否为播放状态
-    {
-        mediaPlayer->play();//播放
-        ifplay=1;
-    }
-    else
-    {
-        mediaPlayer->pause();//暂停
-        ifplay=0;
-    }
-}
-
-
 Widget::~Widget()
 {
     delete ui;
     delete audioOutput;
     delete mediaPlayer;
 }
-
 //上一首
 void Widget::on_pushButton_2_clicked()
 {
@@ -80,7 +63,7 @@ void Widget::on_pushButton_2_clicked()
     mediaPlayer->play();
 }
 
-
+//下一首
 void Widget::on_pushButton_4_clicked()
 {
     curPlayIndex=(curPlayIndex+1)%playList.size();
@@ -88,5 +71,4 @@ void Widget::on_pushButton_4_clicked()
     mediaPlayer->setSource(playList[curPlayIndex]);
     mediaPlayer->play();
 }
-
 
