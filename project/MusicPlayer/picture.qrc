@@ -1,3 +1,17 @@
 <RCC>
-    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/">
+        <file>picture/volume-up.png</file>
+        <file>picture/2740606.png</file>
+        <file>picture/5542261.png</file>
+        <file>picture/folder.png</file>
+        <file>picture/forward.png</file>
+        <file>picture/low-volume.png</file>
+        <file>picture/musiclist.png</file>
+        <file>picture/play.png</file>
+        <file>picture/playing.png</file>
+        <file>picture/playlist random.png</file>
+        <file>picture/playlist repeat.png</file>
+        <file>picture/Repeat once1.png</file>
+        <file>picture/rewind.png</file>
+    </qresource>
 </RCC>
