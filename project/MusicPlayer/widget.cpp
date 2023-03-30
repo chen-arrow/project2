@@ -72,3 +72,17 @@ void Widget::on_pushButton_4_clicked()
     mediaPlayer->play();
 }
 
+//播放
+void Widget::on_pushButton_3_clicked()
+{
+    if (ifplay == 0) // 判断是否为播放状态
+    {
+        mediaPlayer->play(); // 播放
+        ifplay = 1;
+    }
+    else
+    {
+        mediaPlayer->pause(); // 暂停
+        ifplay = 0;
+    }
+}
