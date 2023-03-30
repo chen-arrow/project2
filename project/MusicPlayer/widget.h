@@ -30,6 +30,8 @@ private slots:
 
     void on_Slider_volume_valueChanged(int value);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Widget *ui;
     QList<QUrl> playList;  //播放列表
@@ -37,8 +39,7 @@ private:
     QMediaPlayer * mediaPlayer;  //媒体播放对象
     int curPlayIndex = 0;
 
-
-    int ifplay = 0;
+    int ifplay = 0; // 暂停播放按钮
 
 };
 #endif // WIDGET_H

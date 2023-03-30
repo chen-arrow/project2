@@ -109,3 +109,18 @@ void Widget::on_Slider_volume_valueChanged(int value)
     audioOutput->volumeChanged((float)value/100);
 }
 
+
+void Widget::on_pushButton_clicked()
+{
+    auto path = QFileDialog::getExistingDirectory(this,"请选择音乐所在的目录", "C:\\Users\\dc\\Desktop");
+
+    QDir dir(path);
+    auto musicList = dir.entryList(QStringList()<< "*.wav" << "*.mp3");
+
+    ui->listWidget->addItems(musicList);
+    ui->listWidget->setCurrentRow(0);
+
+    for(auto file : musicList)
+            playList.append(QUrl::fromLocalFile(path + "/" +file));
+}
+
