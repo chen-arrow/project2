@@ -158,6 +158,9 @@ border-image: url(:/picture/volume-up.png);</string>
       <property name="text">
        <string/>
       </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
    </layout>
@@ -191,7 +194,7 @@ border-image: url(:/picture/volume-up.png);</string>
      <x>10</x>
      <y>440</y>
      <width>361</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -232,6 +235,47 @@ border-image: url(:/picture/volume-up.png);</string>
     </item>
    </layout>
   </widget>
+  <widget class="QFrame" name="frame_volume">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>430</y>
+     <width>31</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QSlider" name="Slider_volume">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>260</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>listWidget</zorder>
+  <zorder>playCourseSlider</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>widget_2</zorder>
+  <zorder>frame_volume</zorder>
  </widget>
  <resources/>
  <connections/>

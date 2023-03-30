@@ -39,6 +39,9 @@ Widget::Widget(QWidget *parent)
     //滑动音乐进度条，使音乐进度改变
     connect(ui->playCourseSlider, &QSlider::sliderMoved, mediaPlayer, &QMediaPlayer::setPosition);
 
+    //音量控件默认隐藏
+    ui->frame_volume->setVisible(false);
+
 }
 
 Widget::~Widget()
@@ -86,3 +89,23 @@ void Widget::on_pushButton_3_clicked()
         ifplay = 0;
     }
 }
+//音量控件显示和关闭
+void Widget::on_pushButton_5_toggled(bool checked)
+{
+    if(checked)
+    {
+
+        ui->frame_volume->setVisible(true);
+    }
+    else
+    {
+        ui->frame_volume->setVisible(false);
+    }
+}
+
+//调节音量大小
+void Widget::on_Slider_volume_valueChanged(int value)
+{
+    audioOutput->volumeChanged((float)value/100);
+}
+
