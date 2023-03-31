@@ -53,14 +53,7 @@ Widget::~Widget()
 //上一首
 void Widget::on_pushButton_2_clicked()
 {
-    if(curPlayIndex==0)
-    {
-        curPlayIndex=playList.size()-1;
-    }
-    else
-    {
-        curPlayIndex=(curPlayIndex-1)%playList.size();
-    }
+    curPlayIndex=(curPlayIndex-1)%playList.size();
     ui->listWidget->setCurrentRow(curPlayIndex);
     mediaPlayer->setSource(playList[curPlayIndex]);
     mediaPlayer->play();
@@ -78,16 +71,35 @@ void Widget::on_pushButton_4_clicked()
 //播放
 void Widget::on_pushButton_3_clicked()
 {
-    if (ifplay == 0) // 判断是否为播放状态
+    if(playList.empty())
     {
-        mediaPlayer->play(); // 播放
-        ifplay = 1;
+        return;
     }
-    else
+
+    switch(mediaPlayer->playbackState())
     {
-        mediaPlayer->pause(); // 暂停
-        ifplay = 0;
+        case QMediaPlayer::PlaybackState::StoppedState: //停止状态
+        {
+            //如果没有播放，那就播放当前选中的音乐
+            //获取选中的行号
+            curPlayIndex = ui->listWidget->currentRow();
+            //播放对应下标的音乐
+            mediaPlayer->setSource(playList[curPlayIndex]);
+            mediaPlayer->play();
+            break;
+        }
+        case QMediaPlayer::PlaybackState::PlayingState: //播放状态
+            //如果现在正在播放就暂停音乐
+            mediaPlayer->pause();
+            break;
+        case QMediaPlayer::PlaybackState::PausedState: //暂停状态
+             //如果现在是暂停就继续播放
+            mediaPlayer->play();
+            break;
     }
+
+
+
 }
 //音量控件显示和关闭
 void Widget::on_pushButton_5_toggled(bool checked)
@@ -109,7 +121,7 @@ void Widget::on_Slider_volume_valueChanged(int value)
     audioOutput->volumeChanged((float)value/100);
 }
 
-
+//文件按钮
 void Widget::on_pushButton_clicked()
 {
     auto path = QFileDialog::getExistingDirectory(this,"请选择音乐所在的目录", "C:\\Users\\dc\\Desktop");
@@ -122,5 +134,14 @@ void Widget::on_pushButton_clicked()
 
     for(auto file : musicList)
             playList.append(QUrl::fromLocalFile(path + "/" +file));
+}
+
+//双击播放列表，播放音乐
+void Widget::on_listWidget_doubleClicked(const QModelIndex &index)
+{
+    curPlayIndex = index.row();
+    //播放对应下标的音乐
+    mediaPlayer->setSource(playList[curPlayIndex]);
+    mediaPlayer->play();
 }
 

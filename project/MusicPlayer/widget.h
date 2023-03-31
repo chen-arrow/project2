@@ -32,6 +32,9 @@ private slots:
 
     void on_pushButton_clicked();
 
+
+    void on_listWidget_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::Widget *ui;
     QList<QUrl> playList;  //播放列表
