@@ -1,0 +1,10 @@
+*{
+	bord er:none
+}
+
+QPushButton:hover
+{
+	
+	
+	background-color: rgb(255, 73, 12);
+}
