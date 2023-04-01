@@ -86,14 +86,17 @@ void Widget::on_pushButton_3_clicked()
             //播放对应下标的音乐
             mediaPlayer->setSource(playList[curPlayIndex]);
             mediaPlayer->play();
+            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/playing.png);");
             break;
         }
         case QMediaPlayer::PlaybackState::PlayingState: //播放状态
             //如果现在正在播放就暂停音乐
             mediaPlayer->pause();
+            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/play.png);");
             break;
         case QMediaPlayer::PlaybackState::PausedState: //暂停状态
              //如果现在是暂停就继续播放
+            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/playing.png);");
             mediaPlayer->play();
             break;
     }

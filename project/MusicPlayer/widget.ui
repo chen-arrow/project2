@@ -108,7 +108,7 @@ QPushButton:hover
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/picture/playing.png);</string>
+       <string notr="true">border-image: url(:/picture/play.png);</string>
       </property>
       <property name="text">
        <string/>
