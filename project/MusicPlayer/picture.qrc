@@ -13,5 +13,6 @@
         <file>picture/playlist repeat.png</file>
         <file>picture/Repeat once1.png</file>
         <file>picture/rewind.png</file>
+        <file>picture/background.png</file>
     </qresource>
 </RCC>

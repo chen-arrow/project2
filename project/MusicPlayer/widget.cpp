@@ -42,6 +42,22 @@ Widget::Widget(QWidget *parent)
     //音量控件默认隐藏
     ui->frame_volume->setVisible(false);
 
+    //默认音量值
+    audioOutput->setVolume(0.5);
+    ui->Slider_volume->setValue(50);
+
+    //默认列表循环播放
+    ui->pushButton_6->setIcon(QIcon(":/picture/playlist repeat.png"));
+    connect(mediaPlayer,&QMediaPlayer::mediaStatusChanged,[=](QMediaPlayer::MediaStatus status){
+        if(status==6)
+        {
+            curPlayIndex=(curPlayIndex+1)%playList.size();
+            ui->listWidget->setCurrentRow(curPlayIndex);
+            mediaPlayer->setSource(playList[curPlayIndex]);
+            mediaPlayer->play();
+        }
+    });
+
 }
 
 Widget::~Widget()
@@ -146,5 +162,20 @@ void Widget::on_listWidget_doubleClicked(const QModelIndex &index)
     //播放对应下标的音乐
     mediaPlayer->setSource(playList[curPlayIndex]);
     mediaPlayer->play();
+}
+
+//列表循环播放和单曲循环播放
+void Widget::on_pushButton_6_clicked(bool checked)
+{
+    if(checked)
+    {
+        ui->pushButton_6->setIcon(QIcon(":/picture/Repeat once1.png"));
+        mediaPlayer->setLoops(-1);
+    }
+    else
+    {
+        ui->pushButton_6->setIcon(QIcon(":/picture/playlist repeat.png"));
+        mediaPlayer->setLoops(1);
+    }
 }
 
