@@ -84,6 +84,10 @@ Widget::~Widget()
 //上一首
 void Widget::on_pushButton_2_clicked()
 {
+    if(playList.empty())
+    {
+        return;
+    }
     curPlayIndex=(curPlayIndex-1)%playList.size();
     ui->listWidget->setCurrentRow(curPlayIndex);
     mediaPlayer->setSource(playList[curPlayIndex]);
@@ -93,6 +97,10 @@ void Widget::on_pushButton_2_clicked()
 //下一首
 void Widget::on_pushButton_4_clicked()
 {
+    if(playList.empty())
+    {
+        return;
+    }
     curPlayIndex=(curPlayIndex+1)%playList.size();
     ui->listWidget->setCurrentRow(curPlayIndex);
     mediaPlayer->setSource(playList[curPlayIndex]);
