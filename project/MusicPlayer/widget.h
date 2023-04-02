@@ -36,6 +36,11 @@ private slots:
 
     void on_pushButton_6_clicked(bool checked);
 
+    void btnmove();
+
+    void btnmoveback();
+
+
 private:
     Ui::Widget *ui;
     QList<QUrl> playList;  //播放列表

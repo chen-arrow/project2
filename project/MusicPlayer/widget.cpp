@@ -58,6 +58,21 @@ Widget::Widget(QWidget *parent)
         }
     });
 
+    //按钮移动，还原
+    connect(ui->pushButton,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_2,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_2,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_3,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_3,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_4,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_4,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_5,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_5,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_6,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_6,&QPushButton::released,this,&Widget::btnmoveback);
+
+
 }
 
 Widget::~Widget()
@@ -178,4 +193,18 @@ void Widget::on_pushButton_6_clicked(bool checked)
         mediaPlayer->setLoops(1);
     }
 }
+
+//按钮移动
+void Widget::btnmove()
+{
+    QPushButton *btn = qobject_cast<QPushButton*>(QObject::sender());
+    btn->move(btn->geometry().x() + 1, btn->geometry().y() + 1);
+}
+//按钮移动还原
+void Widget::btnmoveback()
+{
+    QPushButton *btn = qobject_cast<QPushButton*>(QObject::sender());
+    btn->move(btn->geometry().x() - 1, btn->geometry().y() - 1);
+}
+
 

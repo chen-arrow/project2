@@ -14,5 +14,7 @@
         <file>picture/Repeat once1.png</file>
         <file>picture/rewind.png</file>
         <file>picture/background.png</file>
+        <file>picture/background1.png</file>
+        <file>picture/background2.png</file>
     </qresource>
 </RCC>

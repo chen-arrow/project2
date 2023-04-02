@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
+    <width>1024</width>
     <height>580</height>
    </rect>
   </property>
@@ -172,8 +172,11 @@ border-image: url(:/picture/volume-up.png);</string>
      <x>20</x>
      <y>10</y>
      <width>331</width>
-     <height>411</height>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255,255,255,0.5);</string>
    </property>
   </widget>
   <widget class="QSlider" name="playCourseSlider">
@@ -349,12 +352,12 @@ QSlider::handle:vertical:disabled {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>850</width>
+     <width>1024</width>
      <height>580</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> border-image:url(:/picture/background.png);</string>
+    <string notr="true"> border-image:url(:/picture/background1.png);</string>
    </property>
   </widget>
   <zorder>widget_2</zorder>
