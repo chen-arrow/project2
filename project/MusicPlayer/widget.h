@@ -32,8 +32,14 @@ private slots:
 
     void on_pushButton_clicked();
 
-
     void on_listWidget_doubleClicked(const QModelIndex &index);
+
+    void on_pushButton_6_clicked(bool checked);
+
+    void btnmove();
+
+    void btnmoveback();
+
 
 private:
     Ui::Widget *ui;

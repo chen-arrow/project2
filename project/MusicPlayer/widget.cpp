@@ -42,6 +42,37 @@ Widget::Widget(QWidget *parent)
     //音量控件默认隐藏
     ui->frame_volume->setVisible(false);
 
+    //默认音量值
+    audioOutput->setVolume(0.5);
+    ui->Slider_volume->setValue(50);
+
+    //默认列表循环播放
+    ui->pushButton_6->setIcon(QIcon(":/picture/playlist repeat.png"));
+    connect(mediaPlayer,&QMediaPlayer::mediaStatusChanged,[=](QMediaPlayer::MediaStatus status){
+        if(status==6)
+        {
+            curPlayIndex=(curPlayIndex+1)%playList.size();
+            ui->listWidget->setCurrentRow(curPlayIndex);
+            mediaPlayer->setSource(playList[curPlayIndex]);
+            mediaPlayer->play();
+        }
+    });
+
+    //按钮移动，还原
+    connect(ui->pushButton,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_2,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_2,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_3,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_3,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_4,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_4,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_5,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_5,&QPushButton::released,this,&Widget::btnmoveback);
+    connect(ui->pushButton_6,&QPushButton::pressed,this,&Widget::btnmove);
+    connect(ui->pushButton_6,&QPushButton::released,this,&Widget::btnmoveback);
+
+
 }
 
 Widget::~Widget()
@@ -147,4 +178,33 @@ void Widget::on_listWidget_doubleClicked(const QModelIndex &index)
     mediaPlayer->setSource(playList[curPlayIndex]);
     mediaPlayer->play();
 }
+
+//列表循环播放和单曲循环播放
+void Widget::on_pushButton_6_clicked(bool checked)
+{
+    if(checked)
+    {
+        ui->pushButton_6->setIcon(QIcon(":/picture/Repeat once1.png"));
+        mediaPlayer->setLoops(-1);
+    }
+    else
+    {
+        ui->pushButton_6->setIcon(QIcon(":/picture/playlist repeat.png"));
+        mediaPlayer->setLoops(1);
+    }
+}
+
+//按钮移动
+void Widget::btnmove()
+{
+    QPushButton *btn = qobject_cast<QPushButton*>(QObject::sender());
+    btn->move(btn->geometry().x() + 1, btn->geometry().y() + 1);
+}
+//按钮移动还原
+void Widget::btnmoveback()
+{
+    QPushButton *btn = qobject_cast<QPushButton*>(QObject::sender());
+    btn->move(btn->geometry().x() - 1, btn->geometry().y() - 1);
+}
+
 
