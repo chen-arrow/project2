@@ -45,6 +45,14 @@ Widget::Widget(QWidget *parent)
     //默认音量值
     audioOutput->setVolume(0.5);
     ui->Slider_volume->setValue(50);
+    ui->label_volume->setText("50");
+
+    //调节音量数值改变
+    connect(ui->Slider_volume,&QSlider::valueChanged,[=](){
+        int pos=ui->Slider_volume->value();
+        QString str=QString("%1").arg(pos);
+        ui->label_volume->setText(str);
+    });
 
     //默认列表循环播放
     ui->pushButton_6->setIcon(QIcon(":/picture/playlist repeat.png"));
@@ -60,7 +68,7 @@ Widget::Widget(QWidget *parent)
 
     m_pTimer=new QTimer();
     m_pTimer->setInterval(25);
-        connect(m_pTimer,&QTimer::timeout,this,&Widget::upDateRote);
+    connect(m_pTimer,&QTimer::timeout,this,&Widget::upDateRote);
 
     s_pTimer=new QTimer(this);
     s_pTimer->setInterval(15);
@@ -96,7 +104,14 @@ void Widget::on_pushButton_2_clicked()
     {
         return;
     }
-    curPlayIndex=(curPlayIndex-1)%playList.size();
+    if(curPlayIndex==0)
+    {
+        curPlayIndex=playList.size()-1;
+    }
+    else
+    {
+        curPlayIndex=(curPlayIndex-1)%playList.size();
+    }
     ui->listWidget->setCurrentRow(curPlayIndex);
     mediaPlayer->setSource(playList[curPlayIndex]);
     mediaPlayer->play();
@@ -133,7 +148,8 @@ void Widget::on_pushButton_3_clicked()
             //播放对应下标的音乐
             mediaPlayer->setSource(playList[curPlayIndex]);
             mediaPlayer->play();
-            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/playing.png);");
+            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/playing.png);"
+                                            "background-color:rgba(0,0,0,0);");
             break;
         }
         case QMediaPlayer::PlaybackState::PlayingState: //播放状态
@@ -141,13 +157,15 @@ void Widget::on_pushButton_3_clicked()
             mediaPlayer->pause();
             m_pTimer->stop();
             upDateStylusOut();
-            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/play.png);");
+            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/play.png);"
+                                            "background-color:rgba(0,0,0,0);");
             break;
         case QMediaPlayer::PlaybackState::PausedState: //暂停状态
              //如果现在是暂停就继续播放
             m_pTimer->start(100);
             upDateStylusIn();
-            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/playing.png);");
+            ui->pushButton_3->setStyleSheet("border-image: url(:/picture/playing.png);"
+                                            "background-color:rgba(0,0,0,0);");
             mediaPlayer->play();
             break;
     }
