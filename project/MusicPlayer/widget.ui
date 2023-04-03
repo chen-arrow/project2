@@ -33,7 +33,7 @@ QPushButton:hover
     <rect>
      <x>10</x>
      <y>510</y>
-     <width>351</width>
+     <width>571</width>
      <height>64</height>
     </rect>
    </property>
@@ -69,6 +69,37 @@ QPushButton:hover
       </property>
       <property name="text">
        <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -171,7 +202,7 @@ QPushButton:hover
      <x>630</x>
      <y>10</y>
      <width>331</width>
-     <height>441</height>
+     <height>551</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -181,7 +212,7 @@ QPushButton:hover
   <widget class="QSlider" name="playCourseSlider">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>130</x>
      <y>470</y>
      <width>331</width>
      <height>18</height>
@@ -241,7 +272,7 @@ margin-bottom:2px;
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>120</x>
      <y>440</y>
      <width>361</width>
      <height>41</height>
@@ -288,7 +319,7 @@ margin-bottom:2px;
   <widget class="QFrame" name="frame_volume">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>490</x>
      <y>430</y>
      <width>31</width>
      <height>91</height>
@@ -356,47 +387,10 @@ QSlider::handle:vertical:disabled {
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>490</y>
-     <width>32</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>32</width>
-     <height>32</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>32</width>
-     <height>32</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgba(0,0,0,0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>25</width>
-     <height>25</height>
-    </size>
-   </property>
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_Theme">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>530</x>
      <y>530</y>
      <width>92</width>
      <height>29</height>
