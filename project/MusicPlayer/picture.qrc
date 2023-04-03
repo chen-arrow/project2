@@ -16,5 +16,10 @@
         <file>picture/background.png</file>
         <file>picture/background1.png</file>
         <file>picture/background2.png</file>
+        <file>picture/cdCover.png</file>
+        <file>picture/record.png</file>
+        <file>picture/stylus.png</file>
+        <file>qss/origin.qss</file>
+        <file>qss/style.qss</file>
     </qresource>
 </RCC>

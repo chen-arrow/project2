@@ -188,53 +188,6 @@ border-image: url(:/picture/volume-up.png);</string>
      <height>18</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">QSlider::groove:horizontal {
-border: 0px solid #bbb;
-}
-
-/*1.滑动过的槽设计参数*/
-QSlider::sub-page:horizontal {
-background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(16, 181, 140, 255), stop:1 rgba(255, 255, 255, 255));
-border-radius: 2px;
-margin-top:8px;
-margin-bottom:8px;
-}
-
-/*2.未滑动过的槽设计参数*/
-QSlider::add-page:horizontal {
-background: rgb(255,255, 255);
-border: 0px solid #777;
-border-radius: 2px;
-margin-top:9px;
-margin-bottom:9px;
-}
- 
-/*3.平时滑动的滑块设计参数*/
-QSlider::handle:horizontal {
-/*滑块颜色*/
-background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 191, 0, 255), stop:1 rgba(255, 255, 255, 255));
-/*滑块的宽度*/
-width: 5px;
-border: 1px solid rgb(193,204,208);
-border-radius: 2px; 
-
-margin-top:4px;
-
-margin-bottom:4px;
-}
-
-/*4.手动拉动时显示的滑块设计参数*/
-QSlider::handle:horizontal:hover {
-
-background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 191, 0, 255), stop:1 rgba(255, 255, 255, 255));
-width: 10px;
-border: 1px solid rgb(193,204,208);
-border-radius: 5px; 
-margin-top:2px;
-margin-bottom:2px;
-}</string>
-   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -296,7 +249,7 @@ margin-bottom:2px;
     </rect>
    </property>
    <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
+    <enum>QFrame::Box</enum>
    </property>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
@@ -394,26 +347,19 @@ QSlider::handle:vertical:disabled {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="widget_2" native="true">
+  <widget class="QPushButton" name="pushButton_Theme">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1024</width>
-     <height>580</height>
+     <x>390</x>
+     <y>530</y>
+     <width>92</width>
+     <height>29</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true"> border-image:url(:/picture/background1.png);</string>
+   <property name="text">
+    <string>更改主题</string>
    </property>
   </widget>
-  <zorder>widget_2</zorder>
-  <zorder>widget</zorder>
-  <zorder>listWidget</zorder>
-  <zorder>playCourseSlider</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>frame_volume</zorder>
-  <zorder>pushButton_6</zorder>
  </widget>
  <resources/>
  <connections/>
